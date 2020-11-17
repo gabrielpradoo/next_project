@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-/* import kayamaImg from '../../assets/kayama.webp';
-import vip1Img from '../../assets/vip1.webp'; */
 
 export const Container = styled.div`
   width: 100%;
