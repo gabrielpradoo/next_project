@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export default Container = styled.div`
   width: 100%;
 `;
 
-export const HeaderImg = styled.div`
+export default HeaderImg = styled.div`
   position: relative;
 
   max-width: 1440px;
@@ -50,7 +50,7 @@ export const HeaderImg = styled.div`
   }
 `;
 
-export const Main = styled.main`
+export default Main = styled.main`
   margin-top: 22px;
 
   display: flex;

@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export default Container = styled.div`
   width: 100%;
   height: 100%;
   background-color: ${(props) => props.theme.colors.colorWhite};
 `;
 
-export const Main = styled.main`
+export default Main = styled.main`
   max-width: 1440px;
   width: 100%;
   height: 100%;
@@ -17,7 +17,7 @@ export const Main = styled.main`
   }
 `;
 
-export const AboutUsCard = styled.div`
+export default AboutUsCard = styled.div`
   position: relative;
   background: url('/img/kayama.webp') center 30%;
   background-size: cover;
@@ -98,7 +98,7 @@ export const AboutUsCard = styled.div`
   }
 `;
 
-export const OurHistoryCard = styled.div`
+export default OurHistoryCard = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -155,7 +155,7 @@ export const OurHistoryCard = styled.div`
   }
 `;
 
-export const Cards = styled.div`
+export default Cards = styled.div`
   margin-top: 24px;
 
   width: 100%;

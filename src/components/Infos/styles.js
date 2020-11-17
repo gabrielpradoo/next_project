@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+const Container = styled.div`
   border-top: 2px solid ${(props) => props.theme.colors.colorYellowS};
 
   > .infos-title {
@@ -111,3 +111,5 @@ export const Container = styled.div`
     }
   }
 `;
+
+export default Container;

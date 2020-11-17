@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const CardsContainer = styled.div`
+const CardsContainer = styled.div`
   max-width: 1440px;
   width: 100%;
   margin: 45px auto;
@@ -12,7 +12,7 @@ export const CardsContainer = styled.div`
     align-items: center;
   }
 `;
-export const Card = styled.div`
+const Card = styled.div`
   margin: 40px auto;
   width: 95%;
   border: 1px solid ${(props) => props.theme.colors.colorWhite};
@@ -164,7 +164,7 @@ export const Card = styled.div`
   }
 `;
 
-export const CardBar = styled.div`
+const CardBar = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
@@ -172,7 +172,7 @@ export const CardBar = styled.div`
   border-bottom-left-radius: 8px;
 `;
 
-export const CardBarContent = styled.div`
+const CardBarContent = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
@@ -183,7 +183,7 @@ export const CardBarContent = styled.div`
     transform: rotateY(180deg);
   }
 `;
-export const CardFront = styled.div`
+const CardFront = styled.div`
   z-index: 10;
   position: absolute;
   backface-visibility: hidden;
@@ -263,7 +263,7 @@ export const CardFront = styled.div`
   }
 `;
 
-export const CardBack = styled.div`
+const CardBack = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
@@ -342,3 +342,12 @@ export const CardBack = styled.div`
     }
   }
 `;
+
+export default Card;
+export default CardBar;
+export default CardBarContent;
+export default CardFront;
+
+export default CardsContainer;
+
+export default CardBack;
