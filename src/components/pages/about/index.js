@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import Header from '../../components/Header1';
-import Footer from '../../components/Footer';
+import Header from '../../Header1';
+import Footer from '../../Footer';
 
 import { FaFacebookF, FaInstagramSquare, FaYoutube } from 'react-icons/fa';
 
@@ -9,7 +9,7 @@ import { ImNewspaper, ImTrophy, ImQuestion, ImHeart } from 'react-icons/im';
 
 import { Container, Main, AboutUsCard, OurHistoryCard, Cards } from './styles';
 
-function About() {
+const About = () => {
   return (
     <Container>
       <Header />
@@ -197,6 +197,6 @@ function About() {
       <Footer />
     </Container>
   );
-}
+};
 
 export default About;

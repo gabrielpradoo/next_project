@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Header from '../../components/Header1';
-import Footer from '../../components/Footer';
+import Header from '../../Header1';
+import Footer from '../../Footer';
 
 import {
   FaSmile,
@@ -12,9 +12,9 @@ import {
 import { GiSpeedBoat } from 'react-icons/gi';
 
 import { Container, HeaderImg, Main, Content } from './styles';
-import Cards from '../../components/Cards';
+import Cards from '../../Cards';
 
-function Water() {
+const Water = () => {
   const world = 'Roteiro Água';
   return (
     <Container>
@@ -40,6 +40,6 @@ function Water() {
       <Footer />
     </Container>
   );
-}
+};
 
 export default Water;

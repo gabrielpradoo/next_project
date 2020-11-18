@@ -9,12 +9,12 @@ function Header1() {
     <Container>
       <ul>
         <li>
-          <Link href="/about">
+          <Link href="/sobre">
             <a>Sobre Nós</a>
           </Link>
         </li>
         <li>
-          <Link href="/experience">
+          <Link href="/experiencia">
             <a>A Experiencia</a>
           </Link>
         </li>
@@ -26,12 +26,12 @@ function Header1() {
           </Link>
         </li>
         <li>
-          <Link href="/vessels">
+          <Link href="/embarcacoes">
             <a>Nossos Barcos</a>
           </Link>
         </li>
         <li>
-          <Link href="/booking">
+          <Link href="/reservas">
             <a>Reserve Já</a>
           </Link>
         </li>

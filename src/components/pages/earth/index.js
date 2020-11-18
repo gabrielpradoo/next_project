@@ -1,11 +1,11 @@
 import React from 'react';
-import Header from '../../components/Header1';
-import Footer from '../../components/Footer';
+import Header from '../../Header1';
+import Footer from '../../Footer';
 
 import { Container, HeaderImg, Main } from './styles';
-import Cards from '../../components/Cards';
+import Cards from '../../Cards';
 
-function Earth() {
+const Earth = () => {
   const world = 'Roteiro Terra';
   return (
     <Container>
@@ -32,6 +32,6 @@ function Earth() {
       <Footer />
     </Container>
   );
-}
+};
 
 export default Earth;

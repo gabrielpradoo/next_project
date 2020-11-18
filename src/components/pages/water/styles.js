@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-export default Container = styled.div`
+export const Container = styled.div`
   width: 100%;
 `;
 
-export default HeaderImg = styled.div`
+export const HeaderImg = styled.div`
   position: relative;
 
   max-width: 1440px;
@@ -44,7 +44,7 @@ export default HeaderImg = styled.div`
   }
 `;
 
-export default Main = styled.main`
+export const Main = styled.main`
   margin-top: 22px;
 
   display: flex;
@@ -63,7 +63,7 @@ export default Main = styled.main`
   }
 `;
 
-export default Content = styled.section`
+export const Content = styled.section`
   display: grid;
   grid-template-columns: 1fr;
 

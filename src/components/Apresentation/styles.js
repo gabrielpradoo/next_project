@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Container = styled.div`
+export const Container = styled.div`
   width: 100%;
   max-height: 900px;
   height: 100%;
@@ -20,5 +20,3 @@ const Container = styled.div`
     height: 700px;
   }
 `;
-
-export default Container;

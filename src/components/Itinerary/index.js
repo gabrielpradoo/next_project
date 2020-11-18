@@ -25,14 +25,14 @@ function Itinerary() {
       <div className="itineraries">
         <div className="itinerary-earth">
           <div className="content">
-            <Link href="/earth">
+            <Link href="/terra">
               <a className="btn">Roteiro Terra</a>
             </Link>
           </div>
         </div>
         <div className="itinerary-water">
           <div className="content">
-            <Link href="/water">
+            <Link href="/agua">
               <a className="btn">Roteiro Água</a>
             </Link>
           </div>

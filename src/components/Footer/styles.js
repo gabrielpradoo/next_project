@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Container = styled.div`
+export const Container = styled.div`
   position: relative;
   width: 100%;
   height: 340px;
@@ -126,5 +126,3 @@ const Container = styled.div`
     }
   }
 `;
-
-export default Container;

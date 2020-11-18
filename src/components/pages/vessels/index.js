@@ -2,12 +2,12 @@ import React from 'react';
 
 import { Container } from './styles';
 
-function Experience() {
+const Vessels = () => {
   return (
     <Container>
-      <h1>Experience</h1>
+      <h1>Vessels</h1>
     </Container>
   );
-}
+};
 
-export default Experience;
+export default Vessels;

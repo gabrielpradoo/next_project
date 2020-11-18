@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Container = styled.div`
+export const Container = styled.div`
   background: ${(props) => props.theme.colors.colorGrey};
   padding: 0 0 40px 0;
 
@@ -31,5 +31,3 @@ const Container = styled.div`
     }
   }
 `;
-
-export default Container;
