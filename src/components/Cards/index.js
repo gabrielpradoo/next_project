@@ -23,6 +23,37 @@ import {
 } from './styles';
 
 function Cards() {
+  let count = 0;
+
+  function NextImg() {
+    if (typeof window !== 'undefined') {
+      const scroll = document.querySelector('#items');
+      if (count < 5000) {
+        count += 1700;
+        scroll.scrollTo(count, 0);
+        console.log('next click');
+      } else {
+        count = 0;
+        scroll.scrollTo(count, 0);
+        console.log('next end');
+      }
+    }
+  }
+
+  function PrevImg() {
+    if (typeof window !== 'undefined') {
+      const scroll = document.querySelector('#items');
+      if (count > 0) {
+        count -= 1700;
+        scroll.scrollTo(count, 0);
+        console.log('pre click');
+      } else {
+        count = 5000;
+        scroll.scrollTo(count, 0);
+        console.log('pre end');
+      }
+    }
+  }
   const [infos /* setInfos */] = useState([
     {
       day: 1,
@@ -168,7 +199,15 @@ function Cards() {
             </CardBarContent>
           </CardBar>
           <div id="items-wrapper" /* onFocus={} */>
-            <div id="2" className="items 2">
+            <div id="items" className="items 2">
+              <div className="buttons">
+                <button className="prev" onClick={() => PrevImg()}>
+                  {'<'}
+                </button>
+                <button className="next" onClick={() => NextImg()}>
+                  {'>'}
+                </button>
+              </div>
               {info.images.map((image) => (
                 <div className="item">
                   <img src={image} alt="" />

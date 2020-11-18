@@ -144,7 +144,7 @@ export const OurHistoryCard = styled.div`
 
     width: 52%;
     height: 100%;
-    background: url('/img/vip.webp') center 30%;
+    background: url('/img/equipe.webp') center 80%;
     background-size: cover;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;

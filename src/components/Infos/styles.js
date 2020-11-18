@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  width: 100%;
   border-top: 2px solid ${(props) => props.theme.colors.colorYellowS};
 
   > .infos-title {

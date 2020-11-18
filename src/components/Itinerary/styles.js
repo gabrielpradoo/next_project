@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -80,7 +81,7 @@ export const Container = styled.div`
           font-size: 1.1rem;
           font-weight: 700;
 
-          transition: 0.4s;
+          transition: background 0.4s;
 
           :hover {
             transform: scale(1.1);
@@ -95,6 +96,14 @@ export const Container = styled.div`
       background: url('/img/tucano.webp') no-repeat;
       background-position: center;
       background-size: cover;
+
+      transition: background 0.4s;
+
+      :hover {
+        background: url('img/amolar.webp') no-repeat;
+        background-position: 80% center;
+        background-size: cover;
+      }
     }
 
     .itinerary-earth {
@@ -103,6 +112,14 @@ export const Container = styled.div`
       background: url('/img/jacare.webp') no-repeat;
       background-position: 35% 70%;
       background-size: cover;
+
+      transition: background 0.7s;
+
+      :hover {
+        background: url('img/terra/third/1.webp') no-repeat;
+        background-position: 35% 70%;
+        background-size: cover;
+      }
     }
   }
 `;

@@ -10,6 +10,7 @@ const GlobalStyle = createGlobalStyle`
   body{
     background: #e1e1e1;
     position: relative;
+    overflow-x: hidden;
   }
 
   body, button, text-area, input{

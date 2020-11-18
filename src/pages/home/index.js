@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../../components/Header1';
+import HeaderCarousel from '../../components/HeaderCarousel';
 import Apresentation from '../../components/Apresentation';
 import Infos from '../../components/Infos';
 import Itinerary from '../../components/Itinerary';
@@ -15,9 +16,10 @@ function Home() {
   return (
     <Container>
       <Header />
-      <Apresentation />
+      <HeaderCarousel />
       <Infos />
       <Itinerary />
+      <Apresentation />
       <Carousel />
       <Footer />
     </Container>

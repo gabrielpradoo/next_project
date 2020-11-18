@@ -22,6 +22,8 @@ export const Card = styled.div`
   align-items: center;
   justify-content: center;
 
+  scroll-snap-align: start;
+
   @media (max-width: 950px) {
     flex-direction: column;
   }
