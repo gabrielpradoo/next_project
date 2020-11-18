@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 
+<<<<<<< HEAD
 export const Container = styled.div`
   width: 100%;
+=======
+const Container = styled.div`
+>>>>>>> 0be354fa6f596185c19540272641a2c9dedca916
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -123,3 +127,5 @@ export const Container = styled.div`
     }
   }
 `;
+
+export default Container;

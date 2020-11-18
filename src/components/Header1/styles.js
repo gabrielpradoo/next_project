@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.header`
+const Container = styled.header`
   width: 100%;
   height: 95px;
   background: ${(props) => props.theme.colors.colorGreenS};
@@ -55,3 +55,5 @@ export const Container = styled.header`
     }
   }
 `;
+
+export default Container;

@@ -15,15 +15,7 @@ import { Container, HeaderImg, Main, Content } from './styles';
 import Cards from '../../components/Cards';
 
 function Water() {
-  const [world /* setWorld */] = useState('Roteiro Água');
-
-  /*     function handleChangeWord() {
-    const divContent = document.getElementsByClassName('opacity');
-    const monitor = divContent.addEventListener('mouseover');
-
-    return console.log(monitor);
-  } 
- */
+  const world = 'Roteiro Água';
   return (
     <Container>
       <Header />
