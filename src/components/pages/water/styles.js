@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import theme from '../../../styles/theme';
 
 export const Container = styled.div`
   width: 100%;
@@ -18,33 +19,69 @@ export const HeaderImg = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url('/img/vip.webp') no-repeat center 70%;
-  background-size: cover;
+
+  transition: 0.3s;
+
+  :hover {
+    transform: scale(1.01);
+    box-shadow: 2px 2px 15px rgba(100, 100, 100, 0.4);
+  }
+
+  img {
+    filter: blur(10px);
+    border-radius: 8px;
+  }
 
   > .opacity {
     border-radius: inherit;
-
+    z-index: 50;
     position: absolute;
     left: 0;
     top: 0;
     right: 0;
     bottom: 0;
 
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.3);
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    > h2 {
-      text-transform: uppercase;
-      font-size: 3.7rem;
-      color: ${(props) => props.theme.colors.colorYellowS};
+    > .content {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      z-index: 100;
+      > h2 {
+        color: white;
+        font-size: 3rem;
+        margin: 0 12px;
+
+        text-align: center;
+      }
+
+      > .line {
+        width: 30%;
+        height: 1px;
+        border: 1px solid #fff;
+
+        border-radius: 8px;
+      }
     }
   }
 `;
 
 export const Main = styled.main`
+  max-width: 1440px;
+  width: 100%;
+  height: 100%;
+  margin: 20px auto;
+
+  @media (max-width: 1440px) {
+    padding: 24px;
+  }
+
   margin-top: 22px;
 
   display: flex;
@@ -55,103 +92,78 @@ export const Main = styled.main`
   > h3 {
     text-align: center;
     font-size: 1.7rem;
+    color: ${theme.palette.primary.dark};
   }
 
   > p {
     text-align: center;
     font-size: 1.3rem;
+    color: ${theme.palette.primary.dark};
   }
 `;
 
-export const Content = styled.section`
-  display: grid;
-  grid-template-columns: 1fr;
-
-  position: relative;
-
-  margin: 0 auto;
-
+export const Description = styled.div`
   max-width: 1440px;
   width: 100%;
 
-  padding: 32px;
+  margin: 0 auto 20px;
 
-  > .day {
-    position: relative;
-    width: 100%;
-    height: 750px;
-    margin: 18px 0;
+  border-radius: 8px;
 
-    border: 1px solid #80808067;
+  display: grid;
+  grid-template-areas:
+    'script description'
+    'script what_is_included'
+    'script what_is_not_included'
+    'script what_to_bring';
 
+  grid-gap: 12px;
+
+  > .description {
+    grid-area: description;
+  }
+  > .script {
+    grid-area: script;
+  }
+  > .what_is_included {
+    grid-area: what_is_included;
+  }
+  > .what_is_not_included {
+    grid-area: what_is_not_included;
+  }
+  > .what_to_bring {
+    grid-area: what_to_bring;
+  }
+
+  > .description,
+  .script,
+  .what_is_included,
+  .what_is_not_included,
+  .what_to_bring {
     border-radius: 8px;
+    background: ${theme.palette.primary.light};
+    padding: 20px;
 
-    box-shadow: 2px 2px 15px rgba(100, 100, 100, 0.4);
-
-    transition: 0.3s;
-
-    :hover {
-      transform: scale(1.01);
-    }
-
-    > .day-block {
+    > h3 {
+      padding-bottom: 2px;
+      color: ${theme.palette.secondary.light};
+      font-weight: 700;
       width: 100%;
-      height: 60px;
-      background: #999999;
-
-      display: flex;
-
-      border-top-left-radius: 7px;
-      border-top-right-radius: 7px;
-
-      margin-bottom: 32px;
-
-      > p {
-        width: 100px;
-        height: 70px;
-        background: ${(props) => props.theme.colors.colorYellow};
-
-        color: ${(props) => props.theme.colors.colorWhite};
-        font-size: 1.7rem;
-        text-align: center;
-        font-weight: 600;
-
-        padding: 3% 0;
-
-        margin: 0 18px;
-      }
-
-      > .day-block-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-
-        > div {
-          display: flex;
-          align-items: center;
-
-          > span {
-            margin-left: 5px;
-          }
-        }
-      }
+      font-size: 1.7rem;
+      border-bottom: 1px solid ${theme.palette.secondary.dark};
+      margin-bottom: 23px;
     }
 
-    > .day-content {
-      position: relative;
-      padding: 24px;
+    p {
+      font-size: 21px;
       text-align: justify;
-    }
-    > .day-img {
-      position: absolute;
 
-      height: 60%;
+      color: ${theme.palette.secondary.light};
+      font-weight: 600;
 
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background-repeat: no-repeat;
-      background-size: contain;
+      > strong {
+        color: ${theme.palette.primary.dark};
+      }
     }
   }
 `;

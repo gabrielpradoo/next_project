@@ -1,7 +1,9 @@
 import styled from 'styled-components';
+import theme from '../../styles/theme';
 
 export const Container = styled.div`
   width: 100%;
+  z-index: 5;
 
   position: relative;
 
@@ -9,13 +11,12 @@ export const Container = styled.div`
     position: absolute;
     bottom: 0;
     left: 0;
+    right: 0;
 
     width: 90%;
     height: 20vh;
-    z-index: 999;
-
-    margin-left: 40px;
-    margin-bottom: 40px;
+    z-index: 10;
+    margin: 0 auto;
 
     display: flex;
     justify-content: space-between;
@@ -25,8 +26,8 @@ export const Container = styled.div`
       width: 80px;
       height: 120px;
 
-      background: ${(props) => props.theme.colors.colorGreenS};
-      color: ${(props) => props.theme.colors.colorYellowS};
+      background: ${theme.palette.primary.main};
+      color: ${theme.palette.secondary.main};
 
       border: none;
 
@@ -43,7 +44,8 @@ export const Container = styled.div`
       transition: 0.3s;
 
       :hover {
-        transform: scale(1.1);
+        background-color: ${theme.palette.primary.light};
+        border: 1px solid ${theme.palette.secondary.light};
       }
     }
   }
@@ -51,7 +53,7 @@ export const Container = styled.div`
   #items {
     display: flex;
 
-    overflow-x: auto;
+    overflow-x: hidden;
     scroll-snap-type: x mandatory;
     --webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
@@ -75,21 +77,30 @@ export const Container = styled.div`
       height: 100%;
       width: 100%;
 
-      background: rgba(0, 0, 0, 0.8);
+      background: rgba(0, 0, 0, 0.5);
 
       display: flex;
       justify-content: center;
       align-items: center;
 
-      > h3 {
+      > h2 {
+        color: white;
+        font-size: 3rem;
+        margin: 0 12px;
+
         text-align: center;
-        text-transform: uppercase;
-        font-size: 3em;
-        font-weight: 700;
-        color: ${(props) => props.theme.colors.colorYellowS};
       }
 
-      > button {
+      > .line {
+        width: 15%;
+        height: 1px;
+        border: 1px solid #fff;
+        padding: 0 12px;
+
+        border-radius: 8px;
+      }
+
+      /* > button {
         z-index: 10;
         width: 40px;
         height: 40px;
@@ -99,7 +110,7 @@ export const Container = styled.div`
           color: yellow;
           background-color: green;
         }
-      }
+      } */
     }
   }
 

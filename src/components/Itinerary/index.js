@@ -7,16 +7,15 @@ function Itinerary() {
   return (
     <Container>
       <div className="itinerary-text">
-        <h2>Pensando em você</h2>
+        <h2>Escolha seu roteiro</h2>
         <p>
-          Para atender você da melhor maneira possível, nós idealizamos dois
-          caminhos, o{' '}
+          Duas maneiras de vivenciar o pantanal, o{' '}
           <Link href="/terra">
-            <a>Terra</a>
+            <a>Roteiro Terra</a>
           </Link>{' '}
           e o{' '}
           <Link href="/agua">
-            <a>Agua</a>
+            <a>Roteiro Água</a>
           </Link>
           .
         </p>

@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import theme from '../../styles/theme';
 
 export const Container = styled.div`
-  background: ${(props) => props.theme.colors.colorGrey};
+  background: ${theme.palette.grey};
   padding: 0 0 40px 0;
 
   max-width: 1440px;
@@ -12,8 +13,8 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
 
-  border-bottom: 2px solid ${(props) => props.theme.colors.colorYellowS};
-  border-top: 2px solid ${(props) => props.theme.colors.colorYellowS};
+  border-bottom: 2px solid ${theme.palette.secondary.dark};
+  border-top: 2px solid ${theme.palette.secondary.dark};
 
   .carrosel {
     /*     max-width: 1440px; */

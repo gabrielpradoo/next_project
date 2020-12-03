@@ -56,27 +56,47 @@ function HeaderCarousel() {
       <div id="items">
         <div className="item">
           <div className="opacity">
-            <h3>Viva Aventuras</h3>
+            <div className="line"></div>
+            <h2>Viva Aventuras</h2>
+            <div className="line"></div>
           </div>
-          <img src="/img/comodoro.webp" alt="Comodoro" />
+          <img
+            style={{ filter: 'blur(10px)' }}
+            src="/img/comodoro.webp"
+            alt="Comodoro"
+          />
         </div>
         <div className="item">
           <div className="opacity">
-            <h3>Conheça o Pantanal de uma maneira diferente</h3>
+            <div className="line"></div>
+            <h2>Conheça o Pantanal de uma maneira diferente</h2>
+            <div className="line"></div>
           </div>
-          <img src="/img/vip.webp" alt="Vip" />
+          <img style={{ filter: 'blur(10px)' }} src="/img/vip.webp" alt="Vip" />
         </div>
         <div className="item">
           <div className="opacity">
-            <h3>Viva um momento de Lazer</h3>
+            <div className="line"></div>
+            <h2>Viva um momento de Lazer</h2>
+            <div className="line"></div>
           </div>
-          <img src="/img/terra/comodoro.webp" alt="Comodoro" />
+          <img
+            style={{ filter: 'blur(10px)' }}
+            src="/img/terra/comodoro.webp"
+            alt="Comodoro"
+          />
         </div>
         <div className="item">
           <div className="opacity">
-            <h3>Contemple o que a natureza tem para oferecer</h3>
+            <div className="line"></div>
+            <h2>Contemple o que a natureza tem para oferecer</h2>
+            <div className="line"></div>
           </div>
-          <img src="/img/vip1.webp" alt="Vip" />
+          <img
+            style={{ filter: 'blur(10px)' }}
+            src="/img/vip1.webp"
+            alt="Vip"
+          />
         </div>
       </div>
     </Container>

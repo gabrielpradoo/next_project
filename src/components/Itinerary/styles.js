@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import theme from '../../styles/theme';
 
 export const Container = styled.div`
   width: 100%;
@@ -19,7 +20,7 @@ export const Container = styled.div`
     > h2 {
       font-size: 2rem;
       font-weight: 500;
-      color: ${(props) => props.theme.colors.colorYellowS};
+      color: ${theme.palette.secondary.main};
     }
 
     > p {
@@ -27,12 +28,12 @@ export const Container = styled.div`
 
       > a {
         font-weight: 700;
-        color: ${(props) => props.theme.colors.colorBlack};
+        color: black;
         text-decoration: none;
         transition: color 0.4s;
 
         :hover {
-          color: ${(props) => props.theme.colors.colorYellowS};
+          color: ${theme.palette.secondary.dark};
         }
       }
     }
@@ -63,25 +64,18 @@ export const Container = styled.div`
 
         padding-bottom: 18px;
 
-        > span {
-          font-size: 1.7rem;
-          font-weight: 700;
-          color: ${(props) => props.theme.colors.colorWhite};
-          margin-bottom: 8px;
-        }
-
         .btn {
           text-decoration: none;
-          background: ${(props) => props.theme.colors.colorGreenS};
-          padding: 14px 32px;
+          background: ${theme.palette.primary.main};
+          padding: 4% 6%;
 
           border-radius: 3px;
 
-          color: ${(props) => props.theme.colors.colorWhite};
+          color: ${theme.palette.secondary.light};
           font-size: 1.1rem;
           font-weight: 700;
 
-          transition: background 0.4s;
+          transition: 0.4s;
 
           :hover {
             transform: scale(1.1);
@@ -94,14 +88,14 @@ export const Container = styled.div`
       border-radius: 5px;
 
       background: url('/img/tucano.webp') no-repeat;
-      background-position: center;
+      background-position: 30% center;
       background-size: cover;
 
-      transition: background 0.4s;
+      transition: background 0.7s;
 
       :hover {
-        background: url('img/amolar.webp') no-repeat;
-        background-position: 80% center;
+        background: url('img/passeio-moinho.webp') no-repeat;
+        background-position: 30% center;
         background-size: cover;
       }
     }

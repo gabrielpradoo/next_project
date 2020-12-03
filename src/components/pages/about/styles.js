@@ -1,9 +1,10 @@
 import styled from 'styled-components';
+import theme from '../../../styles/theme';
 
 export const Container = styled.div`
   width: 100%;
   height: 100%;
-  background-color: ${(props) => props.theme.colors.colorWhite};
+  background-color: white;
 `;
 
 export const Main = styled.main`
@@ -19,7 +20,7 @@ export const Main = styled.main`
 
 export const AboutUsCard = styled.div`
   position: relative;
-  background: url('/img/kayama.webp') center 30%;
+
   background-size: cover;
   height: 450px;
 
@@ -27,17 +28,22 @@ export const AboutUsCard = styled.div`
 
   border-radius: 8px;
 
-  box-shadow: 2px 2px 15px rgba(100, 100, 100, 0.4);
-
+  z-index: 10;
   transition: 0.3s;
 
   :hover {
     transform: scale(1.01);
+    box-shadow: 2px 2px 15px rgba(100, 100, 100, 0.4);
+  }
+
+  img {
+    filter: blur(10px);
+    border-radius: 8px;
   }
 
   > .opacity {
     border-radius: inherit;
-
+    z-index: 50;
     position: absolute;
     left: 0;
     top: 0;
@@ -50,49 +56,26 @@ export const AboutUsCard = styled.div`
     justify-content: center;
     align-items: center;
 
-    > h2 {
-      color: ${(props) => props.theme.colors.colorWhite};
-      font-size: 3rem;
-      margin: 0 12px;
-
-      text-align: center;
-    }
-
-    > .line {
-      width: 30%;
-      height: 1px;
-      border: 1px solid #fff;
-
-      border-radius: 8px;
-    }
-
-    > .social {
-      position: absolute;
-      top: 0;
-      right: 0;
-
+    > .content {
       display: flex;
-      flex-direction: column;
-      align-items: flex-end;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      z-index: 100;
+      > h2 {
+        color: white;
+        font-size: 3rem;
+        margin: 0 12px;
 
-      margin: 30px 50px;
-
-      > h3 {
-        color: #fff;
+        text-align: center;
       }
 
-      > span {
-        color: #0060df;
-        font-weight: 700;
-      }
+      > .line {
+        width: 30%;
+        height: 1px;
+        border: 1px solid #fff;
 
-      > .social-btns {
-        width: 60%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        padding-top: 5px;
+        border-radius: 8px;
       }
     }
   }
@@ -106,27 +89,29 @@ export const OurHistoryCard = styled.div`
   background-color: #fff;
   height: 350px;
 
-  box-shadow: 2px 2px 15px rgba(100, 100, 100, 0.4);
-
   transition: 0.3s;
 
   :hover {
+    box-shadow: 2px 2px 15px rgba(100, 100, 100, 0.4);
     transform: scale(1.01);
   }
 
   > .history-content {
     width: 50%;
     height: 100%;
-    margin: 0 24px;
-    padding: 12px 0;
+    /* margin: 0 24px; */
+    padding: 18px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background-color: ${theme.palette.primary.light};
 
     > .content-head {
-      border-bottom: 1px solid ${(props) => props.theme.colors.colorYellow};
+      border-bottom: 1px solid ${theme.palette.secondary.dark};
       margin-bottom: 8px;
       h3 {
         font-size: 1.6rem;
         font-weight: 700;
-        color: ${(props) => props.theme.colors.colorYellow};
+        color: ${theme.palette.secondary.light};
         padding: 12px 0;
       }
     }
@@ -134,24 +119,20 @@ export const OurHistoryCard = styled.div`
     > p {
       text-align: justify;
       font-size: 1rem;
+      color: ${theme.palette.secondary.light};
+      font-weight: 600;
     }
   }
 
   > .history-img {
     right: 0;
 
-    width: 52%;
+    width: 50%;
     height: 100%;
     background: url('/img/equipe.webp') center 80%;
     background-size: cover;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
-  }
-
-  @media (max-width: 1300px) {
-    > .history-img {
-      width: 40%;
-    }
   }
 `;
 
@@ -170,13 +151,12 @@ export const Cards = styled.div`
     width: 100%;
     height: 400px;
     border-radius: 8px;
-    background-color: #fff;
-
-    box-shadow: 2px 2px 15px rgba(100, 100, 100, 0.4);
+    background-color: ${theme.palette.primary.light};
 
     transition: 0.3s;
 
     :hover {
+      box-shadow: 2px 2px 15px rgba(100, 100, 100, 0.4);
       transform: scale(1.01);
     }
 
@@ -188,11 +168,11 @@ export const Cards = styled.div`
 
       > label {
         padding-bottom: 2px;
-        color: ${(props) => props.theme.colors.colorYellow};
+        color: ${theme.palette.secondary.light};
         font-weight: 700;
         width: 80%;
-        font-size: 1.7rem;
-        border-bottom: 1px solid ${(props) => props.theme.colors.colorYellow};
+        font-size: 24px;
+        border-bottom: 1px solid ${theme.palette.secondary.dark};
       }
     }
 
@@ -206,13 +186,23 @@ export const Cards = styled.div`
 
       span {
         font-size: 1.1rem;
-        font-weight: 500;
+        font-weight: 600;
+        color: ${theme.palette.secondary.light};
       }
 
       data {
         font-size: 0.8rem;
         font-weight: 700;
         color: #b1b1b1;
+      }
+
+      p {
+        color: ${theme.palette.secondary.light};
+        font-weight: 600;
+      }
+
+      h4 {
+        color: ${theme.palette.primary.dark};
       }
     }
 
@@ -223,18 +213,18 @@ export const Cards = styled.div`
       bottom: 0;
       right: 0;
       padding: 12px 24px;
-      border: 1px solid #0060df;
+      border: 1px solid ${theme.palette.primary.dark};
       border-radius: 8px;
 
       text-decoration: none;
-      color: #0060df;
+      color: ${theme.palette.primary.dark};
       font-weight: 700;
 
       transition: 0.2s;
 
       :hover {
-        background: #0060df;
-        color: #fff;
+        background: ${theme.palette.primary.dark};
+        color: ${theme.palette.secondary.light};
       }
     }
   }

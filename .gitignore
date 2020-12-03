@@ -8,6 +8,12 @@
 # testing
 /coverage
 
+admin.js
+booking.js
+shopping.js
+user.js
+
+
 # next.js
 /.next/
 /out/

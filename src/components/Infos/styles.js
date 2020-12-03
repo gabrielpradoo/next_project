@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import theme from '../../styles/theme';
 
 export const Container = styled.div`
-  border-top: 2px solid ${(props) => props.theme.colors.colorYellowS};
+  border-top: 2px solid ${theme.palette.secondary.light};
 
   > .infos-title {
     display: flex;
@@ -21,6 +22,8 @@ export const Container = styled.div`
       /*justify-content: space-around;*/
       align-items: center;
 
+      background: ${theme.palette.primary.light};
+
       .infos-text-content {
         margin: auto 0;
         display: flex;
@@ -28,15 +31,17 @@ export const Container = styled.div`
         align-items: center;
 
         > h2 {
-          color: ${(props) => props.theme.colors.colorYellowS};
-          font-size: 2.5rem;
-          font-weight: 300;
+          width: 100%;
+          color: ${theme.palette.secondary.light};
+          font-size: 2rem;
+          font-weight: 400;
           text-transform: uppercase;
           text-align: center;
+          margin-bottom: 8px;
         }
 
         > p {
-          color: ${(props) => props.theme.colors.colorGreenS};
+          color: ${theme.palette.primary.dark};
           font-size: 1.3rem;
           font-weight: 400;
           width: 60%;
@@ -58,7 +63,7 @@ export const Container = styled.div`
   > .infos-title-1 {
     margin: 0 0 25px 0;
 
-    border-bottom: 2px solid ${(props) => props.theme.colors.colorYellowS};
+    border-bottom: 2px solid ${theme.palette.secondary.light};
 
     display: flex;
     flex-direction: row-reverse;
@@ -76,6 +81,8 @@ export const Container = styled.div`
       /*justify-content: space-around;*/
       align-items: center;
 
+      background: ${theme.palette.primary.light};
+
       .infos-text-content {
         margin: auto 0;
         display: flex;
@@ -83,16 +90,17 @@ export const Container = styled.div`
         align-items: center;
 
         > h2 {
-          color: ${(props) => props.theme.colors.colorYellowS};
-          font-size: 2.5rem;
-          font-weight: 300;
+          width: 100%;
+          color: ${theme.palette.secondary.light};
+          font-size: 2rem;
+          font-weight: 400;
           text-transform: uppercase;
           text-align: center;
           margin-bottom: 8px;
         }
 
         > p {
-          color: ${(props) => props.theme.colors.colorGreenS};
+          color: ${theme.palette.primary.dark};
           font-size: 1.3rem;
           font-weight: 400;
           width: 60%;

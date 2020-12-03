@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import theme from '../../styles/theme';
 
 export const CardsContainer = styled.div`
   max-width: 1440px;
@@ -14,8 +15,8 @@ export const CardsContainer = styled.div`
 `;
 export const Card = styled.div`
   margin: 40px auto;
-  width: 95%;
-  border: 1px solid ${(props) => props.theme.colors.colorWhite};
+  width: 100%;
+  border: 1px solid white;
   height: 650px;
 
   display: flex;
@@ -29,13 +30,17 @@ export const Card = styled.div`
   }
 
   border-radius: 8px;
-
   transition: 0.3s;
 
   :hover {
-    transform: scale(1.01);
     box-shadow: 2px 2px 15px rgba(100, 100, 100, 0.9);
   }
+
+  /*
+  :hover {
+    transform: scale(1.01);
+    box-shadow: 2px 2px 15px rgba(100, 100, 100, 0.9);
+  } */
 
   .img {
     width: 60%;
@@ -91,7 +96,7 @@ export const Card = styled.div`
 
       ::-webkit-scrollbar-track {
         border-bottom-right-radius: 8px;
-        background-color: ${(props) => props.theme.colors.colorGreenS};
+        background-color: ${theme.palette.primary.main};
       }
       ::-webkit-scrollbar {
         height: 12px;
@@ -101,7 +106,7 @@ export const Card = styled.div`
       }
       ::-webkit-scrollbar-thumb {
         border-radius: 8px;
-        background: ${(props) => props.theme.colors.colorYellowS};
+        background: ${theme.palette.secondary.main};
       }
 
       .item {
@@ -178,21 +183,16 @@ export const CardBarContent = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  transform-style: preserve-3d;
-  transition: all 0.5s ease;
-
-  :hover {
-    transform: rotateY(180deg);
-  }
 `;
 export const CardFront = styled.div`
   z-index: 10;
   position: absolute;
   backface-visibility: hidden;
-  background-color: #fff;
-  color: #000;
+  background-color: ${theme.palette.primary.light};
+  color: ${theme.palette.secondary.light};
+  font-weight: 600;
 
-  border-right: 1px solid ${(props) => props.theme.colors.colorWhite};
+  border-right: 1px solid white;
 
   border-top-left-radius: 7px;
   border-bottom-left-radius: 7px;
@@ -204,20 +204,20 @@ export const CardFront = styled.div`
     display: flex;
 
     border-top-left-radius: 7px;
-    background-color: ${(props) => props.theme.colors.colorWhite};
-    height: 6vh;
+    background-color: ${theme.palette.primary.dark};
+    height: 55px;
     margin-bottom: 30px;
 
     > h3 {
       display: flex;
       width: 25%;
-      height: 125%;
-      background: green;
+      height: 65px;
+      background: ${theme.palette.primary.main};
 
       justify-content: center;
       align-content: center;
 
-      color: ${(props) => props.theme.colors.colorWhite};
+      color: white;
       font-size: 1.7rem;
       text-align: center;
       font-weight: 600;
@@ -256,91 +256,20 @@ export const CardFront = styled.div`
   }
 
   .card-content {
-    padding: 15px;
+    padding: 25px;
 
     > p {
-      font-size: 22px;
+      font-size: 1.1rem;
       text-align: justify;
-    }
-  }
-`;
-
-export const CardBack = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  background-color: #fff;
-  color: #000;
-  transform: rotateY(180deg);
-
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
-
-  > header {
-    display: flex;
-
-    border-top-left-radius: 7px;
-    background-color: ${(props) => props.theme.colors.colorWhite};
-    height: 6vh;
-    margin-bottom: 30px;
-
-    > h3 {
-      display: flex;
-      width: 25%;
-      height: 125%;
-      background: green;
-
-      justify-content: center;
-      align-content: center;
-
-      color: ${(props) => props.theme.colors.colorWhite};
-      font-size: 1.7rem;
-      text-align: center;
-      font-weight: 600;
-
-      padding: 3% 0;
-
-      margin: 0 18px;
+      padding: 8px;
     }
 
-    .card-titles {
-      height: 100%;
-      width: 100%;
+    > ul {
+      padding: 24px;
 
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-
-      > .description {
-        height: 24px;
-        display: flex;
-        align-items: center;
-
-        > h3 {
-          width: 100%;
-        }
-
-        > span {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 24px;
-          margin: 0 4px;
-        }
+      > li {
+        font-size: 1rem;
       }
-    }
-  }
-
-  > ul {
-    width: 80%;
-    height: 50%;
-    margin: auto;
-
-    > li {
-      text-transform: uppercase;
-      font-size: 1.5em;
-      margin-bottom: 12px;
     }
   }
 `;

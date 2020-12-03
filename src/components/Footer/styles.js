@@ -1,109 +1,122 @@
 import styled from 'styled-components';
+import theme from '../../styles/theme';
 
 export const Container = styled.div`
   position: relative;
   width: 100%;
-  height: 340px;
+  height: 250px;
   display: flex;
   justify-content: space-between;
 
-  padding: 32px;
+  padding: 12px 32px;
 
-  background: ${(props) => props.theme.colors.colorGreen};
+  background: ${theme.palette.primary.main};
 
-  > .find-us,
-  .contact-us {
-    height: 100%;
-    width: 45%;
-
+  > .footer {
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
 
-    > h3 {
-      color: ${(props) => props.theme.colors.colorYellowS};
-      font-size: 1.7rem;
-      margin-bottom: 18px;
-    }
-  }
+    > .find-us,
+    .social,
+    .contact-us {
+      height: 100%;
+      width: 25%;
 
-  > .find-us {
-    align-items: flex-start;
-
-    > .find-us-content {
-      height: 23%;
       display: flex;
       flex-direction: column;
 
-      > p {
-        font-size: 1.2rem;
-        font-weight: 600;
-        margin-bottom: 4px;
-        color: ${(props) => props.theme.colors.colorWhite};
+      > h3 {
+        color: ${theme.palette.secondary.main};
+        font-size: 18px;
+        margin-bottom: 18px;
       }
     }
 
-    > .on-map {
-      margin-top: 16px;
+    > .find-us {
+      align-items: flex-start;
 
-      text-decoration: none;
-      color: ${(props) => props.theme.colors.colorYellow};
-      font-size: 1.3rem;
-      font-weight: 600;
-      transition: color 0.5s;
+      > .find-us-content {
+        height: 50%;
+        display: flex;
+        flex-direction: column;
 
-      :hover {
-        color: ${(props) => props.theme.colors.colorYellow};
-      }
-    }
-  }
+        > p {
+          font-size: 16px;
+          font-weight: 600;
+          margin-bottom: 4px;
+          color: white;
+        }
 
-  > .contact-us {
-    align-items: flex-end;
+        > .on-map {
+          margin-top: 8px;
 
-    > .contact-content {
-      height: 40%;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
+          text-decoration: none;
+          color: ${theme.palette.secondary.light};
+          font-size: 16px;
 
-      > p {
-        font-size: 1.2rem;
-        font-weight: 600;
-        margin-bottom: 4px;
-        color: ${(props) => props.theme.colors.colorWhite};
-      }
+          transition: 0.5s;
 
-      > .email-contact {
-        margin-top: 8px;
-
-        text-decoration: none;
-        color: ${(props) => props.theme.colors.colorYellow};
-        font-size: 1.3rem;
-        font-weight: 600;
-        transition: color 0.5s;
-
-        :hover {
-          color: ${(props) => props.theme.colors.colorYellowS};
+          :hover {
+            font-weight: 600;
+            color: ${theme.palette.secondary.main};
+          }
         }
       }
     }
 
     .social {
-      margin-top: 16px;
-
       display: flex;
       flex-direction: column;
 
-      > span {
-        color: ${(props) => props.theme.colors.colorYellowS};
-        font-weight: 400;
-        font-size: 1rem;
-        margin-bottom: 8px;
-      }
-
       > .social-content {
+        height: 50%;
         display: flex;
-        justify-content: space-around;
+        flex-direction: column;
+        justify-content: space-between;
+
+        > a {
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          font-size: 16px;
+          color: ${theme.palette.secondary.light};
+          transition: 0.5s;
+
+          :hover {
+            font-weight: 600;
+            color: ${theme.palette.secondary.main};
+          }
+        }
+      }
+    }
+
+    > .contact-us {
+      > .contact-content {
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+
+        > p {
+          font-size: 16px;
+          font-weight: 600;
+          margin-bottom: 4px;
+          color: ${theme.palette.grey[100]};
+        }
+
+        > .email-contact {
+          margin-top: 8px;
+
+          text-decoration: none;
+          font-size: 16px;
+          color: ${theme.palette.secondary.light};
+          transition: 0.5s;
+
+          :hover {
+            font-weight: 600;
+            color: ${theme.palette.secondary.main};
+          }
+        }
       }
     }
   }
@@ -115,14 +128,15 @@ export const Container = styled.div`
     right: 0;
     padding: 5px 0;
 
-    background: ${(props) => props.theme.colors.colorGreenS};
+    background: ${theme.palette.secondary.main};
 
     display: flex;
     justify-content: space-around;
 
     > p,
     a {
-      color: ${(props) => props.theme.colors.colorWhite};
+      font-weight: 600;
+      color: ${theme.palette.primary.dark};
     }
   }
 `;

@@ -4,7 +4,7 @@ import HeaderCarousel from '../../HeaderCarousel';
 import Apresentation from '../../Apresentation';
 import Infos from '../../Infos';
 import Itinerary from '../../Itinerary';
-import Carousel from '../../Carousel';
+import FooterCarousel from '../../FooterCarousel';
 import Footer from '../../Footer';
 
 import { Container } from './styles';
@@ -17,7 +17,7 @@ const Home = () => {
       <Infos />
       <Itinerary />
       <Apresentation />
-      <Carousel />
+      <FooterCarousel />
       <Footer />
     </Container>
   );

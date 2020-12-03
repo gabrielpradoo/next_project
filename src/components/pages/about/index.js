@@ -3,6 +3,8 @@ import Link from 'next/link';
 import Header from '../../Header1';
 import Footer from '../../Footer';
 
+import theme from '../../../styles/theme';
+
 import { FaFacebookF, FaInstagramSquare, FaYoutube } from 'react-icons/fa';
 
 import { ImNewspaper, ImTrophy, ImQuestion, ImHeart } from 'react-icons/im';
@@ -15,40 +17,17 @@ const About = () => {
       <Header />
       <Main>
         <AboutUsCard>
+          <img
+            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            src="/img/kayama.webp"
+            alt=""
+          />
           <div className="opacity">
-            <div className="social">
-              <h3>Siga nossas redes sociais</h3>
-              <span>#cruzeiropantanal</span>
-              <div className="social-btns">
-                <a
-                  className="on-map"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://www.youtube.com/user/joicetur"
-                >
-                  <FaYoutube color={'#f1f1f1'} size={30} />
-                </a>
-                <a
-                  className="on-map"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://www.instagram.com/joicetur/"
-                >
-                  <FaInstagramSquare color={'#f1f1f1'} size={30} />
-                </a>
-                <a
-                  className="on-map"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://www.facebook.com/joicetur"
-                >
-                  <FaFacebookF color={'#f1f1f1'} size={30} />
-                </a>
-              </div>
+            <div className="content">
+              <div className="line"></div>
+              <h2>Sobre Nós</h2>
+              <div className="line"></div>
             </div>
-            <div className="line"></div>
-            <h2>Sobre Nós</h2>
-            <div className="line"></div>
           </div>
         </AboutUsCard>
         <OurHistoryCard>
@@ -80,7 +59,10 @@ const About = () => {
           <div className="generic">
             <div className="generic-head">
               <label>Notícias</label>
-              <ImNewspaper size={45} color="#FFBA00" />
+              <ImNewspaper
+                size={45}
+                style={{ color: `${theme.palette.secondary.light}` }}
+              />
             </div>
 
             <div className="generic-content">
@@ -108,8 +90,11 @@ const About = () => {
           </div>
           <div className="generic">
             <div className="generic-head">
-              <label>Premios e Elogios</label>
-              <ImTrophy size={45} color="#FFBA00" />
+              <label>Premios e Comentários</label>
+              <ImTrophy
+                size={45}
+                style={{ color: `${theme.palette.secondary.light}` }}
+              />
             </div>
 
             <div className="generic-content">
@@ -138,7 +123,10 @@ const About = () => {
           <div className="generic">
             <div className="generic-head">
               <label>Perguntas Frequentes (FAQ)</label>
-              <ImQuestion size={45} color="#FFBA00" />
+              <ImQuestion
+                size={45}
+                style={{ color: `${theme.palette.secondary.light}` }}
+              />
             </div>
 
             <div className="generic-content">
@@ -167,7 +155,10 @@ const About = () => {
           <div className="generic">
             <div className="generic-head">
               <label>Base da Empresa</label>
-              <ImHeart size={45} color="#FFBA00" />
+              <ImHeart
+                size={45}
+                style={{ color: `${theme.palette.secondary.light}` }}
+              />
             </div>
 
             <div className="generic-content">

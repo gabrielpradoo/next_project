@@ -8,15 +8,6 @@ function Infos() {
       <div className="infos-title">
         <div className="infos-text">
           <div className="infos-text-content">
-            <h2>Conheça o Pantanal de camarote</h2>
-            <p>
-              Experimente nossa <strong>Gastronomia</strong>, conheça nossa
-              Cultura. Descubra nas{' '}
-              <strong>Ladeiras de Corumbá, Mato Grosso do Sul</strong>, a
-              história, as belezas de nosso <strong>Casario</strong> e a
-              hospitalidade do <strong>nosso Povo</strong>.
-            </p>
-
             <h2>
               Contemple a{' '}
               <strong>
@@ -37,17 +28,14 @@ function Infos() {
         <div className="infos-text">
           <div className="infos-text-content">
             <h2>
-              Um roteiro <strong>Incrível!</strong>
+              Conheça o <strong>Pantanal</strong> de camarote
             </h2>
             <p>
-              Viver o Pantanal na sua essência.
-              <br /> Conhecer uma cidade histórica.
-              <br />
-              Sentir o cheiro do mato, o Vento no rosto e o Frescor da Água do
-              Rio.
-              <br /> Observar a Fauna e Flora de pertinho, ouvindo o som da
-              Floresta.
-              <br /> Desbravar o Pantanal pela noite, atrás de Onças e Jacarés.
+              Experimente nossa <strong>Gastronomia</strong>, conheça nossa
+              Cultura. Descubra nas{' '}
+              <strong>Ladeiras de Corumbá, Mato Grosso do Sul</strong>, a
+              história, as belezas de nosso <strong>Casario</strong> e a
+              hospitalidade do <strong>nosso Povo</strong>.
             </p>
           </div>
         </div>
